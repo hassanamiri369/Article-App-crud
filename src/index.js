@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+import ArticleProvider from "./context/context"
 
 
 ReactDOM.render(
  
-    <App />
+    <ArticleProvider>
+      <App />
+    </ArticleProvider>
   
     
   ,
