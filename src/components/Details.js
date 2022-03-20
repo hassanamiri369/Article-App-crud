@@ -9,8 +9,6 @@ const Details = () => {
    
     const {id} = useParams()
 
-   
-    
     React.useEffect(()=>{
         const userArticle = article.find(x => x.id === id)
         console.log(userArticle)
@@ -19,16 +17,20 @@ const Details = () => {
 
   return (
     <>
-        <div>Details</div>
-        <Link to="/"><button>Go back</button></Link>
-        <p>id : {id}</p>
-        <hr/>
+        <div className='GoBackButton'>
+          <h1>Details</h1>
+          <Link to="/"><button>Go back</button></Link>
+        </div>
+        {/* <p>id : {id}</p> */}
+        
         <div className='detailContainer'>
-            <p>{oneArticle && oneArticle.category}</p>
-            <p>{oneArticle && oneArticle.heading}</p>
+            <div className='detailsInfo'>
+            <h2>{oneArticle && oneArticle.category}</h2>
+            <h4>{oneArticle && oneArticle.heading}</h4>
             <p>{oneArticle && oneArticle.subHeading}</p>
             <p>{oneArticle && oneArticle.description}</p>
-            <p>{oneArticle && oneArticle.author}</p>
+            <h5>{oneArticle && oneArticle.author}</h5>
+            </div>
         </div>
     </>
   )

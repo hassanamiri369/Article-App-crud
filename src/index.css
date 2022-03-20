@@ -28,14 +28,158 @@ code {
   
 }
 
+header{
+  width: 100%;
+  height: 6rem;
+  
+  box-shadow: 0 0 10px gray;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.createArticle{
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.GoBackButton {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.header-span{
+ font-size: 24px;
+ font-weight:600;
+ margin-bottom: 15px;
+
+  
+}
 
 .articleList{
   /* background-color: antiquewhite; */
-  background-color: aqua;
+  background-color: rgb(170, 245, 245);
   width: 350px;
   height: 100%;
   border-radius: 10px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
   padding: 10px;
 
+}
+
+.button-group{
+  /* width: 90%; */
+  /* background-color: blue; */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button{
+  padding:6px 13px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.deleteButton{
+  background-color: red;
+}
+
+.editButton{
+  background-color: yellow;
+  color: blue;
+}
+
+
+/* Details */
+.detailContainer{
+  /* background-color: blue; */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsInfo{
+  color: white;
+ width: 80%;
+ background-color: rebeccapurple;
+ padding: 40px;
+ border-radius: 4px;
+}
+
+.detailsInfo p{
+  line-height: 40px;
+}
+
+.Form-container{
+  /* background-color: aquamarine; */
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+form{
+  /* background-color: blue; */
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formControl{
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input{
+  width: 450px;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  padding: 8px;
+  border : 1px solid gray;
+}
+
+textarea{
+  /* background-color: blue; */
+  width: 460px;
+}
+
+.textEdit{
+  width: 460px;
+  height: 100px;
+}
+
+.createButton1{
+  background-color: rgb(3, 204, 3);
+  padding:7px 18px;
+}
+
+.cancelButton{
+  background-color: red;
+  margin-left:10px;
 }

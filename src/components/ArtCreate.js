@@ -30,10 +30,12 @@ const ArtCreate = () => {
    
   return (
     <>
-        <div>ArtCreate</div>
+       <div className='createArticle'>
+       <h2>ArtCreate</h2>
         <Link><button onClick={()=> history.push("/")}>Go back</button></Link>
+       </div>
 
-        <div>
+        <div className="Form-container">
             <form onSubmit={handleSubmit}>
 
                 <div className='formControl'>
@@ -48,20 +50,22 @@ const ArtCreate = () => {
 
                 <div className='formControl'>
                     <label>subHeading</label>
-                    <input required="required" placeholder='subHeading' type="text" value={subHeading} onChange={(e)=> setSubHeading(e.target.value)}  />
+                    <textarea rows="10"  required="required" placeholder='subHeading' type="text" value={subHeading} onChange={(e)=> setSubHeading(e.target.value)}  ></textarea>
                 </div>
 
                 <div className='formControl'>
                     <label>description</label>
-                    <input required="required" placeholder='description' type="text" value={description} onChange={(e)=> setDescription(e.target.value)}  />
+                    <textarea required="required" placeholder='description' type="text" value={description} onChange={(e)=> setDescription(e.target.value)} ></textarea>
                 </div>
 
                 <div className='formControl'>
                     <label>author</label>
                     <input required="required" placeholder='author' type="text" value={author} onChange={(e)=> setAuthor(e.target.value)}  />
                 </div>
-                <button type='submit'>create</button>
-                <Link to="/"><button>cancel</button></Link>
+                <div className='createButtons'>
+                <button className='createButton1' type='submit'>create</button>
+                <Link to="/"> <button className='cancelButton'> cancel</button></Link>
+                </div>
             </form>
         </div>
     </>

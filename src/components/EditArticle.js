@@ -33,26 +33,28 @@ const EditArticle = () => {
   return (
       <>
       
-      <div>EditArticle</div>
+      
+      <div className='createArticle'>
+        <h2>ArtCreate</h2>
+       </div>
 
-      <div className="container Articleedit">
-        <h3>Edit Articles</h3>
-        <br />
-        <br />
+      <div className="Form-container">
+       
         <form onSubmit={onSubmit}>
-          <div > <label>Article Heading</label> <input  value={selectedArticle.heading}   onChange={e => handleOnChange("heading", e.target.value)} />
+          <div  className='formControl' > <label>Category</label> <input placeholder='category'  value={selectedArticle.heading}   onChange={e => handleOnChange("heading", e.target.value)} />
           </div>
-          <div > <label>Sub Heading</label> <textarea  value={selectedArticle.subHeading}   onChange={e => handleOnChange("subHeading", e.target.value)} ></textarea>
+          <div className='formControl' > <label>Heading</label> <textarea placeholder='heading'   value={selectedArticle.subHeading}   onChange={e => handleOnChange("subHeading", e.target.value)} ></textarea>
           </div>
-          <div > <label>Description</label> <textarea  value={selectedArticle.description}   onChange={e => handleOnChange("description", e.target.value)} ></textarea>
+          <div className='formControl' > <label>subHeading</label> <textarea className='textEdit' placeholder='subHeading' value={selectedArticle.description}   onChange={e => handleOnChange("description", e.target.value)} ></textarea>
           </div>
-          <div > <label>Article Category</label> <input  type="text"  value={selectedArticle.category}   onChange={e => handleOnChange("category", e.target.value)} />
+          <div className='formControl' > <label>description</label> <input placeholder='description' type="text"  value={selectedArticle.category}   onChange={e => handleOnChange("category", e.target.value)} />
           </div>
-          <div > <label>Author Name</label> <input   type="text" value={selectedArticle.author}  onChange={e => handleOnChange("author", e.target.value)} />
+          <div  className='formControl'> <label>Author</label> <input placeholder='author'  type="text" value={selectedArticle.author}  onChange={e => handleOnChange("author", e.target.value)} />
           </div>
-          <button type="submit"> Save Article  </button>
-          <Link to="/"> <button type="button">   Cancel </button>
-          </Link>
+         <div>
+         <button className='createButton1' type="submit"> Save Article  </button>
+          <Link to="/"> <button type="button" className='cancelButton'>   Cancel </button> </Link>
+         </div>
         </form>
       </div>
       </>
