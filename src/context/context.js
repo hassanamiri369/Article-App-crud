@@ -39,10 +39,19 @@ const reducer = (state , action) =>{
     }
 }
 
+// , ()=>{
+//     const localData = localStorage.getItem("article");
+//     return localData ? JSON.parse(localData) : []
+// }
 const ArticleProvider = (props) => {
 
-    const [state , dispatch] = useReducer(reducer , initState)
+    const [state , dispatch] = useReducer(reducer , initState )
 
+
+    // localStorage 
+    // React.useEffect(()=>{
+    //     localStorage.setItem("article" , JSON.stringify(state))
+    // } ,[state])
 
     // action.payload == article === {id : nextId() , category : "Frontend" , heading : "WebDeveloper" , subHeading : "React developer", description : "this is frontend language" , author : "junior"}
 
